@@ -1,0 +1,15 @@
+plugin.tx_extbasedam {
+	persistence {
+		classes {
+			Tx_ExtbaseDam_Domain_Model_Dam {
+				// this has to be overwritten obviously
+				newRecordStoragePid = 0
+				mapping {
+					tableName = tx_dam
+				}
+			}
+		}
+	}
+}
+
+config.tx_extbase.persistence.classes.Tx_ExtbaseDam_Domain_Model_Dam < plugin.tx_extbasedam.persistence.classes.Tx_ExtbaseDam_Domain_Model_Dam
